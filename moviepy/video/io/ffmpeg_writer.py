@@ -87,8 +87,9 @@ class FFMPEG_VideoWriter:
         self.ext = self.filename.split(".")[-1]
 
         # order is important
-        cmd = [
-            get_setting("FFMPEG_BINARY"), '-c:v', 'h264_cuvid'] + i_arg +
+        cmd =
+            ([get_setting("FFMPEG_BINARY"), '-c:v', 'h264_cuvid']
+            [
             "-y",
             "-loglevel",
             "error" if logfile == sp.PIPE else "info",
