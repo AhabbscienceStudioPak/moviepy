@@ -91,7 +91,7 @@ class FFMPEG_VideoReader:
             i_arg = ["-i", self.filename]
 
         cmd = (
-            [get_setting("FFMPEG_BINARY")]
+            [get_setting("FFMPEG_BINARY"), '-c:v', 'h264_cuvid']
             + i_arg
             + [
                 "-loglevel",
